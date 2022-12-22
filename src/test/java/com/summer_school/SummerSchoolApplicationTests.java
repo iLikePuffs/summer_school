@@ -13,6 +13,7 @@ class SummerSchoolApplicationTests {
     @Test
     void testSignIn() {
         System.out.println(userSignInService.signIn("admin","a123456"));
+
     }
 
 }
