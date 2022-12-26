@@ -14,9 +14,11 @@ public interface ClassesDao {
    // @Insert("insert into class_table (summerSchoolId,name) values(#{summerSchoolId},#{name})")
    // @Insert("insert into class_table (id,summerSchoolId,name) values(#{id},#{summerSchoolId},#{name})")
 
-    @Insert("insert into class_table (id,name,summerSchoolId) values(#{id},#{name},#{summerSchoolId})")
+    @Insert("insert into class_table (name,summerSchoolId) values(#{name},#{summerSchoolId})")
     public int save(Classes classes);
 
+
+    //按id查找班级
     @Select("select * from class_table where id = #{id}")
     public Classes getById(Integer id);
 
