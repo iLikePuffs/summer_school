@@ -9,7 +9,6 @@ import java.util.List;
 
 @Mapper
 public interface HomeworkDao {
-
     //查看已发布作业
     @Select("select * from homework_table")
     List<Homework> homeworkList();

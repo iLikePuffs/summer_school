@@ -21,6 +21,7 @@ public interface StudentHomeworkDao {
     List<StudentHomework> StudentHomeworkList();
 
     //学生提交作业
+
     @Insert("insert into student_homework_table (studentHomeWorkID,studentId,homeWorkID,homeworkContent,create_time,correctingStatus) values(#{studentHomeWorkID},#{studentId},#{homeWorkID},#{homeworkContent},#{create_time},#{correctingStatus})")
     int addStudentHomework(StudentHomework studentHomework);
 }

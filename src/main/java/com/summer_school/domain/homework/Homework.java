@@ -19,7 +19,6 @@ public class Homework {
     private String publisherIdentity;
     private Timestamp publishTime;
     private Timestamp endTime;
-
     public Homework(){
 
     }

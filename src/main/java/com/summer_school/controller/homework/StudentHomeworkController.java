@@ -31,6 +31,7 @@ public class StudentHomeworkController {
     }
 
     //提交作业
+
     @RequestMapping("/insertHomework")
     public String insertSHomework(@RequestParam(value = "studentHomeWorkID") int studentHomeWorkID,
                               @RequestParam(value = "studentId") int studentId,

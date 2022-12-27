@@ -19,7 +19,6 @@ public class StudentHomework {
     private Timestamp create_time;
     private String correctingStatus;
     private int score;
-
     public StudentHomework(){
 
     }

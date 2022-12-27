@@ -16,7 +16,6 @@ public class HomeworkService {
     public List<Homework> homeworkList(){
         return homeworkDao.homeworkList();
     }
-
     public int insertHomework(Homework homework){
         return homeworkDao.insertHomework(homework);
     }
