@@ -38,6 +38,7 @@ public class StudentHomeworkController {
                               @RequestParam(value = "homeWorkID") int homeWorkID,
                               @RequestParam(value = "homeworkContent") String homeworkContent,
                               @RequestParam(value = "create_time") Timestamp create_time,
+                           //       @RequestParam(value = "correctingStatus") String correctingStatus
                               @RequestParam(value = "correctingStatus") String correctingStatus){
         StudentHomework homework=new StudentHomework();
         homework.setStudentHomeWorkID(studentHomeWorkID);
@@ -45,7 +46,7 @@ public class StudentHomeworkController {
         homework.setHomeWorkID(homeWorkID);
         homework.setHomeworkContent(homeworkContent);
         homework.setCreate_time(create_time);
-        homework.setCorrectingStatus(correctingStatus);
+        homework.setCorrectingStatus("未批改");
       //  homework.setScore(score);
 
         if(studentHomeworkService.addStudentHomework(homework)==1)
@@ -53,6 +54,22 @@ public class StudentHomeworkController {
         else {
             return "Fail insert";
         }
+    }
+
+    //批改作业
+    @RequestMapping("/correctHomework")
+    public String correctHomework(@RequestParam(value = "studentHomeWorkID") int studentHomeWorkID,
+                                  @RequestParam(value = "correctingStatus") String correctingStatus,
+                                  @RequestParam(value = "score") int score){
+        StudentHomework homework=new StudentHomework();
+        homework.setCorrectingStatus("已批改");
+        homework.setScore(score);
+        if(studentHomeworkService.correctHomework(studentHomeWorkID,correctingStatus,score)==1)
+            return "Successful ";
+        else {
+            return " Fail";
+        }
+
     }
 
 

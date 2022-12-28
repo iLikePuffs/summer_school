@@ -25,4 +25,8 @@ public class StudentHomeworkService {
     public int addStudentHomework(StudentHomework studentHomework){
         return studentHomeworkDao.addStudentHomework(studentHomework);
     }
+
+    public int correctHomework(int studentHomeWorkID,String correctingStatus,int score){
+        return studentHomeworkDao.correctHomework(studentHomeWorkID,correctingStatus,score);
+    }
 }
