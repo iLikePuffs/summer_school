@@ -8,10 +8,7 @@ import com.summer_school.domain.signIn.SignIn;
 import com.summer_school.service.signIn.SignInService;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.sql.Time;
 import java.sql.Timestamp;
@@ -25,8 +22,8 @@ public class SignInController {
     @Autowired
     private SignInService signInService;
 
-    //创建签到
-    @PostMapping("/put")
+
+
 /**
     public int punch_in(HttpServletRequest request) throws Exception {
         //操作记录条数，初始化为0
@@ -47,9 +44,25 @@ public class SignInController {
     }
 **/
 
-    public Result sign_put(@RequestBody SignIn signIn) {
-        boolean flag = signInService.sign_put(signIn);
-        return new Result(flag ? Code.INSERT_OK: Code.INSERT_ERR,flag);
+    //创建签到
+    @RequestMapping("/put")
+    public String sign_put(@RequestParam(value = "researchHotSpotId") int researchHotSpotId,
+                           @RequestParam(value = "signPutTime") Timestamp signPutTime) {
+        SignIn signIn= new SignIn();
+/**
+        Date day=new Date();
+        SimpleDateFormat sdf= new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+
+        signIn.setSignPutTime(Timestamp.valueOf(sdf.format(day)));
+**/
+        signIn.setResearchHotSpotId(researchHotSpotId);
+        signIn.setSignPutTime(signPutTime);
+        if(signInService.sign_put(signIn)==1)
+            return "Successful insert";
+        else {
+            return "Fail insert";
+        }
+
     }
 
     //正常签到

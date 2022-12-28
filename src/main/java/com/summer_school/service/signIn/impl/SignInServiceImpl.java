@@ -23,8 +23,8 @@ public class SignInServiceImpl implements SignInService {
     }
 **/
 
-    public boolean sign_put(SignIn signIn){
-        return signInDao.sign_put(signIn)>0;
+    public int sign_put(SignIn signIn){
+        return signInDao.sign_put(signIn);
     }
 
     //正常签到打卡
