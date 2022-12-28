@@ -21,4 +21,5 @@ public class ClassAddServiceImpl implements ClassAddService {
     public List<ClassAdd> ClassAddList(int classId){
         return classAddDao.ClassAddList(classId);
     }
+
 }
