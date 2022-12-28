@@ -1,8 +1,8 @@
-package com.summer_school.service.signup_and_examine.impl;
+package com.summer_school.service.update.impl;
 
 import com.summer_school.dao.user.StudentDao;
 import com.summer_school.domain.user.lasting.Student;
-import com.summer_school.service.signup_and_examine.StudentUpdateService;
+import com.summer_school.service.update.StudentUpdateService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

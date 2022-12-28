@@ -1,12 +1,10 @@
-package com.summer_school.controller.user;
+package com.summer_school.controller.update;
 
 
 import com.summer_school.controller.tool.Code;
 import com.summer_school.controller.tool.Result;
 import com.summer_school.domain.user.lasting.EducationalAdministartor;
-import com.summer_school.domain.user.lasting.Teacher;
-import com.summer_school.service.signup_and_examine.EducationalAdministartorUpdateService;
-import com.summer_school.service.signup_and_examine.TeacherUpdateService;
+import com.summer_school.service.update.EducationalAdministartorUpdateService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

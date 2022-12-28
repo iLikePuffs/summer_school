@@ -1,4 +1,4 @@
-package com.summer_school.service.signup_and_examine;
+package com.summer_school.service.update;
 
 import com.summer_school.domain.user.lasting.EducationalAdministartor;
 import com.summer_school.domain.user.lasting.Teacher;

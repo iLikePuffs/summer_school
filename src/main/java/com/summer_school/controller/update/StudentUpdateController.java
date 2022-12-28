@@ -1,11 +1,10 @@
-package com.summer_school.controller.user;
+package com.summer_school.controller.update;
 
 
-import ch.qos.logback.core.model.Model;
 import com.summer_school.controller.tool.Code;
 import com.summer_school.controller.tool.Result;
 import com.summer_school.domain.user.lasting.Student;
-import com.summer_school.service.signup_and_examine.StudentUpdateService;
+import com.summer_school.service.update.StudentUpdateService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
