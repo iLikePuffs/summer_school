@@ -29,4 +29,5 @@ public interface StudentHomeworkDao {
     //批改作业
     @Update("update student_homework_table set correctingStatus='已批改', score=#{score} where studentHomeWorkID=#{studentHomeWorkID}")
     int correctHomework(int studentHomeWorkID,String correctingStatus,int score);
+
 }
